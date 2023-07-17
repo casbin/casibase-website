@@ -1,0 +1,58 @@
+name: Build and Deploy
+on: 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  push:
+      branches:
+        - master
+jobs:
+  build-and-deploy:
+    env: 
+      CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          # yarn crowdin:sync
+          yarn build
+    
+      - name: Build PDF prerequisites 🔨
+        run: |
+          sudo apt install fonts-noto -y
+          curl https://www.princexml.com/download/prince-14.2-linux-generic-x86_64.tar.gz -O
+          tar zxf prince-14.2-linux-generic-x86_64.tar.gz
+          cd prince-14.2-linux-generic-x86_64
+          yes "" | sudo ./install.sh
+
+      # https://github.com/signcl/docusaurus-prince-pdf
+      - name: Generate PDF 🖨️
+        run: |
+          yarn serve > /dev/null &
+          sleep 3s
+          npx docusaurus-prince-pdf --include-index -u http://localhost:3000/docs/overview --output pdf/Casibase_Docs.pdf
+          npx docusaurus-prince-pdf --include-index -u http://localhost:3000/zh/docs/overview --list-only
+          wget https://gist.githubusercontent.com/Selflocking/7a07d91d34ee227c93d2d8f583f981e3/raw/996a610b96e7e1f42e06ec555528f3427c2fb647/print.css
+          prince --no-warn-css --style=print.css --input-list=./pdf/localhost-zh-docs-overview.txt -o pdf/Casibase_Docs_zh.pdf
+          rm pdf/*.txt
+          mv pdf/* build/pdf/ -f
+
+      - name: Upload results 📤
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDFs
+          path: build/pdf/
+          if-no-files-found: error
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY}}
+          git-config-name: ${{ secrets.GIT_NAME }}
+          git-config-email: ${{ secrets.GIT_EMAIL }}
+          repository-name: casbin/casibase.github.io
+          branch: master # The deploy branch.
+          folder: build # The deploy folder.
