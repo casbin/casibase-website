@@ -135,7 +135,7 @@ module.exports = {
             },
             {
               label: "QQ Group",
-              href: "https://qm.qq.com/cgi-bin/qm/qr?k=Yt983DUU_-fRcOiOj6SzRUeQJ44Waq2_&jump_from=webapi&authKey=2QUsTg4yotL4cm6z5gQONmxp1mC28pAkr3e/BRlm7FfWrN2na7rc+ye+tu+JXAx+",
+              href: "https://cdn.casdoor.com/casdoor/resource/built-in/admin/qq_casibase.png",
             },
             {
               label: "Wechat Group",
