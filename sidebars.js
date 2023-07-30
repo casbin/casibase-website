@@ -19,8 +19,18 @@ module.exports = {
         "overview",
         {
           type: "link",
-          label: "PDF Download",
-          href: "/pdf",
+          label: "Core Concepts",
+          href: "/docs/basic/core-concepts",
+        },
+        {
+          type: "link",
+          label: "Server Installation",
+          href: "/docs/basic/server-installation",
+        },
+        {
+          type: "link",
+          label: "Casdoor SSO",
+          href: "/docs/basic/casdoor-sso",
         },
       ],
     },
