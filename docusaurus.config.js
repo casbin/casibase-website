@@ -11,7 +11,6 @@ module.exports = {
   favicon: "img/favicon.png",
   organizationName: "casbin", // Usually your GitHub org/user name.
   projectName: "casibase-website", // Usually your repo name.
-  trailingSlash: false,
   i18n: {
     defaultLocale: "en",
     locales: ["en", "zh", "fr", "de", "ko", "ru", "ja"],
