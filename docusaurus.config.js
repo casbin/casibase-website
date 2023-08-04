@@ -200,10 +200,10 @@ var _hmt = _hmt || [];
     },
   },
   // // https://docusaurus.io/docs/markdown-features/diagrams#configuration
-  // markdown: {
-  //   mermaid: true,
-  // },
-  // themes: ["@docusaurus/theme-mermaid"],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
   presets: [
     [
       "@docusaurus/preset-classic",
