@@ -17,21 +17,9 @@ module.exports = {
       link: {type: "generated-index"},
       items: [
         "overview",
-        {
-          type: "link",
-          label: "Core Concepts",
-          href: "/docs/basic/core-concepts",
-        },
-        {
-          type: "link",
-          label: "Server Installation",
-          href: "/docs/basic/server-installation",
-        },
-        {
-          type: "link",
-          label: "Casdoor SSO",
-          href: "/docs/basic/casdoor-sso",
-        },
+        "basic/core-concepts",
+        "basic/server-installation",
+        "basic/casdoor-sso",
       ],
     },
     // {

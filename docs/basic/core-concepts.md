@@ -9,35 +9,35 @@ As Casibase's user, you should get familiar with at least 4 core concepts: `Prov
 
 ```mermaid
 flowchart TD;
-subgraph Providers;
-subgraph Storage_Provider
-AWS\\nAzure\\nLocal
-end
-
-subgraph AI_Provider
-OpenAI\\nChatGLM\\nInternLM
-end
-end;
-
-subgraph Vectors;
-Text_Vector;
-Image_Vector;
-...;
-end;
-
-subgraph Chats;
-Question;
-Query_Prompt;
-Answer;
-end;
-
-AI_Provider --> Embedding;
-AI_Provider --> Chats;
-Storage_Provider --> Embedding;
-Embedding --> Vectors;
-Vectors --> Query_Prompt;
-Query_Prompt --> Answer;
-Question --> Query_Prompt;
+    subgraph Providers;
+    subgraph Storage_Provider
+    AWS\\nAzure\\nLocal
+    end
+    
+    subgraph AI_Provider
+    OpenAI\\nChatGLM\\nInternLM
+    end
+    end;
+    
+    subgraph Vectors;
+    Text_Vector;
+    Image_Vector;
+    ...;
+    end;
+    
+    subgraph Chats;
+    Question;
+    Query_Prompt;
+    Answer;
+    end;
+    
+    AI_Provider --> Embedding;
+    AI_Provider --> Chats;
+    Storage_Provider --> Embedding;
+    Embedding --> Vectors;
+    Vectors --> Query_Prompt;
+    Query_Prompt --> Answer;
+    Question --> Query_Prompt;
 ```
 
 ## Provider
