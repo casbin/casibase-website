@@ -1,18 +1,123 @@
 ---
 title: Overview
 description: Casibase Overview
-keywords: [casibase]
-authors: [casbin]
+keywords: [casibase, ai, knowledge database]
+authors: [kv-chiu]
 ---
 
-## Headers
+```mdx-code-block
+import styles from "./styles.module.css";
+import CasdoorCard from "@site/src/components/CasdoorCard";
+```
 
-Only h2 and h3 will be in the TOC by default, so h1 is not recommended to use.
+Casibase is a Open-Source [Domain Knowledge](https://en.wikipedia.org/wiki/Domain_knowledge) Database & IM & Forum Software powered by [ChatGPT](https://en.wikipedia.org/wiki/ChatGPT).
 
-### h3
+```mdx-code-block
+<div className={styles.gradientborder}>
+  <CasdoorCard src="https://ai.casbin.com" />
+</div>
+```
 
-content
+## Casibase features
 
-#### h4
+1. Front-end and back-end separate architecture, developed by Golang, Casibase supports high concurrency, provides web-based managing UI and supports multiple languages(Chinese, English).
 
-content
+2. Casibase supports third-party applications login, such as GitHub, Google, QQ, WeChat, etc., and supports the extension of third-party login with plugins.
+
+3. Based on embedding and prompt engineering for knowledge management, Casibase supports customized embedding methods and language models.
+
+4. Casibase supports integration with existing systems by db sync, so users can transition to Casibase smoothly.
+
+5. Casibase supports mainstream databases: MySQL, PostgreSQL, SQL Server, etc., and supports the extension of new databases with plugins.
+
+## How it works
+
+### Step 0 (Pre-knowledge)
+
+Casibase's knowledge retrieval process is based on Embedding and Prompt engineering, so it is highly recommended that you take a brief look at how Embedding works. An [introduction](https://openai.com/blog/new-and-improved-embedding-model) to Embedding.
+
+![embedding](/img/embedding.gif)
+
+### Step 1 (Importing Knowledge)
+
+To get started with Casibase, users need to follow these steps to import knowledge and create a domain-specific knowledge database:
+
+1. **Configure Storage:** In the Casibase dashboard, users should first configure the storage settings. This involves specifying the storage system to be used for storing knowledge-related files, such as documents, images, or any other relevant data. Users can choose from a variety of storage options based on their preferences and requirements.
+
+2. **Upload Files to Storage:** Once the storage is set up, users can proceed to upload files containing domain-specific knowledge into the configured storage system. These files can be in various formats, such as text documents, images, or structured data files like CSV or JSON.
+
+3. **Select Embedding Method for Knowledge Generation:** After the files are uploaded, users have the option to choose the embedding method for generating knowledge and corresponding vectors. Embeddings are numerical representations of textual or visual content, which facilitate efficient similarity search and data analysis.
+
+:::tip
+
+How knowledge is embedded?
+
++ For textual data: Users can choose from various embedding methods, such as Word2Vec, GloVe, or BERT, to convert the textual knowledge into meaningful vectors.
+
++ For visual data: If the uploaded files contain images or visual content, users can select image embedding techniques like CNN-based feature extraction to create representative vectors.
+
++ More methods coming soon...
+
+:::
+
+By following these steps, users can populate their domain knowledge database with relevant information and corresponding embeddings, which will be used for effective searching, clustering, and retrieval of knowledge within Casibase. The embedding process allows the system to understand the context and relationships between different pieces of knowledge, enabling more efficient and insightful knowledge management and exploration.
+
+### Step 2 (Retrieving Knowledge)
+
+After importing your `domain knowledge`, Casibase transforms it into `vectors` and stores these vectors in a `vector database`. This vector representation enables powerful functions like `similarity search` and `efficient retrieval of related information`. You can quickly find relevant data based on context or content, enabling advanced querying and uncovering valuable insights within your domain knowledge.
+
+### Step 3 (Building the Prompt)
+
+Casibase performs a similarity search on the stored knowledge vectors to find the closest match to the user's query. Using the search results, it creates a `prompt template` to frame a specific question for the `language model`. This ensures accurate and contextually relevant responses, delivering comprehensive answers based on the domain knowledge in Casibase.
+
+### Step 4 (Achieving the Goal)
+
+At this stage, using Casibase, you have successfully acquired the knowledge you sought. Through the innovative combination of domain knowledge transformed into vectors and powerful language models like ChatGPT, Casibase provides you with accurate and relevant responses to your inquiries. This enables you to efficiently access and utilize the domain-specific information stored in Casibase, meeting your knowledge requirements with ease.
+
+### Step 5 (Optional Fine-tuning)
+
+If you find that the results are not entirely satisfactory, you can try to get better results by doing the following:
+
++ Tweaking Language Model Parameters
+
++ Asking multiple questions
+
++ Optimizing the original files
+
+By utilizing these fine-tuning options, you can improve the efficiency of your knowledge management in Casibase, ensure that the system is better aligned with your goals, and provide more accurate and insightful information.
+
+:::note Hints
+
+Other ways to optimize results (may require source code changes):
+
++ Updating `Embedding` Results: Refine the knowledge representation by adjusting the embedding results of your domain knowledge.
+
++ Modifying `Prompt` Templates: By customizing the prompts, you can elicit more precise responses from the language model.
+
++ Exploring Different `Language Models`: Experiment with different models to find the one that best suits your requirements for generating responses.
+
+:::
+
+## Online demo
+
+### Casibase
+
+Here is an online demo deployed by Casbin.
+
++ [Casibase official demo](https://ai.casbin.com)
+
+Global admin login:
+
++ Username: `admin`
++ Password: `123`
+
+## Architecture
+
+Casibase contains 4 parts:
+
+Name | Description | Language | Source code
+----|------|----|----
+Frontend | User interface for the casibase application | JavaScript + React | <https://github.com/casbin/casibase/tree/master/web>
+Backend | Server-side logic and API for casibase | Golang + Beego + MySQL | <https://github.com/casbin/casibase>
+AI Model | Artificial intelligence model | Python + OpenAI | <https://github.com/casbin/casibase/tree/master/ai>
+Knowledge Base | Storage for casibase application domain knowledge | pgvector | <https://github.com/casbin/casibase/tree/master/ai>
