@@ -160,7 +160,7 @@ yarn install
 yarn start
 ```
 
-Visit: **http://localhost:13001** in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
+Visit: `http://localhost:13001` in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
 
 ```bash
 admin
@@ -197,7 +197,7 @@ yarn install
 yarn build
 ```
 
-Visit: **http://localhost:14000** in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
+Visit: `http://localhost:14000` in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
 
 ```bash
 admin
