@@ -67,8 +67,7 @@ git clone https://github.com/casbin/casibase
 
 ### Configure Database
 
-Casibase supports mysql, mssql, sqlite3, postgres. Casibase uses mysql by default. If you use another database, please
-modify the import package in [object/adapter](https://github.com/casbin/casibase/blob/master/object/adapter.go).
+Casibase supports mysql, mssql, sqlite3, postgres. Casibase uses mysql by default.
 
 #### MySQL
 
