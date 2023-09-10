@@ -2,7 +2,7 @@
 title: Server Installation
 description: Install and configure Casdoor server
 keywords: [Casibase server, installation, configuration]
-authors: [kv-chiu]
+authors: [kv-chiu, uestc-wxy]
 ---
 
 ## Requirements
@@ -67,39 +67,9 @@ git clone https://github.com/casbin/casibase
 
 ### Configure Casdoor
 
-Casibase uses Casdoor as its backend service,so make sure to deploy it in advance. 
+Please refer to: <https://casibase.org/docs/basic/casdoor-sso> to configure Casdoor.
 
-Please refer to: <https://casdoor.org/docs/basic/server-installation> to install and configure Casdoor.
-
-Follow these steps to setup Casdoor for casibase:
-
-* Create an Organization
-
-![create-organization](/img/create-organization.png)
-
-* Configure information about the Organization
-
-![configure-organization](/img/configure-organization.png)
-
-* Create a new Application
-
-![create-application](/img/create-application.png)
-
-* Configuring Application Information (Remember Name, ClientID and ClientSecret)
-
-![configure-application](/img/configure-application.png)
-
-* Add a member to the newly created organization
-
-![add-user](/img/add-user-1.png)
-
-![add-user](/img/add-user-2.png)
-
-* Configure member information (remember its Name as well as Password)
-
-![configure-user](/img/configure-user-1.png)
-
-![configure-user](/img/configure-user-2.png)
+Remember your `clientId`、`clientSecret`、`organization`、`application` and so on in Casdoor configuration, we will use them later.
 
 ### Configure Database
 
@@ -163,7 +133,7 @@ dbName = casibase
 
 Casibase supports custom configuration, you can modify the configuration file `conf/app.conf` to change the configuration.
 
-* Backend (casibase\conf\app.conf)
+- Backend (casibase\conf\app.conf)
 
 ```ini
 casdoorEndpoint =  http://localhost:8000
@@ -173,7 +143,7 @@ casdoorOrganization = casibase
 casdoorApplication = app-casibase
 ```
 
-* Frontend (casibase\web\src\Conf.js)
+- Frontend (casibase\web\src\Conf.js)
 
 ```js
 serverUrl: "http://localhost:7001"
@@ -181,7 +151,7 @@ clientId: "<Your_clientId_in_Casdoor_configuration>"
 appName: "app-casibase"
 organizationName: "casibase"
 ```
-    
+
 ## Run
 
 There are currently two methods to start, you can choose one according to your own situation.
