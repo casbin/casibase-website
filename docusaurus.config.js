@@ -192,7 +192,7 @@ var _hmt = _hmt || [];
     announcementBar: {
       id: "announcement", // ID of the announcement bar
       content:
-        `<a target="_blank" rel="noreferrer" href="https://casbin.org/">💖 Looking for an open-source and cross-platform authorization solution that supports ACL, RBAC, ABAC? Learn more about: Casbin</a>`,
+        "<a target=\"_blank\" rel=\"noreferrer\" href=\"https://casbin.org/\">💖 Looking for an open-source and cross-platform authorization solution that supports ACL, RBAC, ABAC? Learn more about: Casbin</a>",
       isCloseable: true,
     },
     docs: {
@@ -214,26 +214,14 @@ var _hmt = _hmt || [];
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           sidebarCollapsed: false,
-          editUrl: ({locale, docPath}) => {
-            if (locale === "en") {
-              return `https://github.com/casbin/casibase-website/edit/master/docs/${docPath}`;
-            }
-            if (locale === "zh") {
-              return "https://crowdin.com/project/casibase-website/zh-CN";
-            }
-            return `https://crowdin.com/project/casibase-website/${locale}`;
+          editUrl: ({docPath}) => {
+            return `https://github.com/casbin/casibase-website/edit/master/docs/${docPath}`;
           },
         },
         blog: {
           showReadingTime: true,
-          editUrl: ({locale, blogDirPath, blogPath}) => {
-            if (locale === "en") {
-              return `https://github.com/casbin/casibase-website/edit/master/${blogDirPath}/${blogPath}`;
-            }
-            if (locale === "zh") {
-              return "https://crowdin.com/project/casibase-website/zh-CN";
-            }
-            return `https://crowdin.com/project/casibase-website/${locale}`;
+          editUrl: ({blogDirPath, blogPath}) => {
+            return `https://github.com/casbin/casibase-website/edit/master/${blogDirPath}/${blogPath}`;
           },
         },
         theme: {
