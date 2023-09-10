@@ -65,6 +65,42 @@ git clone https://github.com/casbin/casibase
 
 ## Configuration
 
+### Configure Casdoor
+
+Casibase uses Casdoor as its backend service,so make sure to deploy it in advance. 
+
+Please refer to: <https://casdoor.org/docs/basic/server-installation> to install and configure Casdoor.
+
+Follow these steps to setup Casdoor for casibase:
+
+* Create an Organization
+
+![create-organization](/img/create-organization.png)
+
+* Configure information about the Organization
+
+![configure-organization](/img/configure-organization.png)
+
+* Create a new Application
+
+![create-application](/img/create-application.png)
+
+* Configuring Application Information (Remember Name, ClientID and ClientSecret)
+
+![configure-application](/img/configure-application.png)
+
+* Add a member to the newly created organization
+
+![add-user](/img/add-user-1.png)
+
+![add-user](/img/add-user-2.png)
+
+* Configure member information (remember its Name as well as Password)
+
+![configure-user](/img/configure-user-1.png)
+
+![configure-user](/img/configure-user-2.png)
+
 ### Configure Database
 
 Casibase supports mysql, mssql, sqlite3, postgres. Casibase uses mysql by default.
@@ -123,6 +159,29 @@ dataSourceName = "file:casibase.db?cache=shared"
 dbName = casibase
 ```
 
+### Custom configuration
+
+Casibase supports custom configuration, you can modify the configuration file `conf/app.conf` to change the configuration.
+
+* Backend (casibase\conf\app.conf)
+
+```ini
+casdoorEndpoint =  http://localhost:8000
+clientId = <Your_clientId_in_Casdoor_configuration>
+clientSecret = <Your_clientSecret_in_Casdoor_configuration>
+casdoorOrganization = casibase
+casdoorApplication = app-casibase
+```
+
+* Frontend (casibase\web\src\Conf.js)
+
+```js
+serverUrl: "http://localhost:7001"
+clientId: "<Your_clientId_in_Casdoor_configuration>" 
+appName: "app-casibase"
+organizationName: "casibase"
+```
+    
 ## Run
 
 There are currently two methods to start, you can choose one according to your own situation.
@@ -159,13 +218,6 @@ yarn install
 yarn start
 ```
 
-Visit: `http://localhost:13001` in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
-
-```bash
-admin
-123
-```
-
 ### Production mode
 
 #### Backend
@@ -196,12 +248,15 @@ yarn install
 yarn build
 ```
 
-Visit: `http://localhost:14000` in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
+## Preview
 
-```bash
-admin
-123
-```
+Visit: `http://localhost:13001` in your browser. Login into Casibase dashboard with the user account you have just registered in Casdoor:
+
+![login](/img/login-casibase.png)
+
+Then you will go to the home page of Casibase:
+
+![home](/img/casibase-home.png)
 
 :::tip
 
