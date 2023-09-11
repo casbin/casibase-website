@@ -2,7 +2,7 @@
 title: Server Installation
 description: Install and configure Casdoor server
 keywords: [Casibase server, installation, configuration]
-authors: [kv-chiu]
+authors: [kv-chiu, uestc-wxy]
 ---
 
 ## Requirements
@@ -65,6 +65,12 @@ git clone https://github.com/casbin/casibase
 
 ## Configuration
 
+### Configure Casdoor
+
+Please refer to: <https://casibase.org/docs/basic/casdoor-sso> to configure Casdoor.
+
+Remember your `clientId`、`clientSecret`、`organization`、`application` and so on in Casdoor configuration, we will use them later.
+
 ### Configure Database
 
 Casibase supports mysql, mssql, sqlite3, postgres. Casibase uses mysql by default.
@@ -123,6 +129,29 @@ dataSourceName = "file:casibase.db?cache=shared"
 dbName = casibase
 ```
 
+### Custom configuration
+
+Casibase supports custom configuration, you can modify the configuration file `conf/app.conf` to change the configuration.
+
+- Backend (casibase\conf\app.conf)
+
+```ini
+casdoorEndpoint =  http://localhost:8000
+clientId = <Your_clientId_in_Casdoor_configuration>
+clientSecret = <Your_clientSecret_in_Casdoor_configuration>
+casdoorOrganization = casibase
+casdoorApplication = app-casibase
+```
+
+- Frontend (casibase\web\src\Conf.js)
+
+```js
+serverUrl: "http://localhost:7001"
+clientId: "<Your_clientId_in_Casdoor_configuration>" 
+appName: "app-casibase"
+organizationName: "casibase"
+```
+
 ## Run
 
 There are currently two methods to start, you can choose one according to your own situation.
@@ -159,13 +188,6 @@ yarn install
 yarn start
 ```
 
-Visit: `http://localhost:13001` in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
-
-```bash
-admin
-123
-```
-
 ### Production mode
 
 #### Backend
@@ -196,12 +218,15 @@ yarn install
 yarn build
 ```
 
-Visit: `http://localhost:14000` in your browser. Log into Casibase dashboard with the default global admin account: `built-in/admin`
+## Preview
 
-```bash
-admin
-123
-```
+Visit: `http://localhost:13001` in your browser. Login into Casibase dashboard with the user account you have just registered in Casdoor:
+
+![login](/img/login-casibase.png)
+
+Then you will go to the home page of Casibase:
+
+![home](/img/casibase-home.png)
 
 :::tip
 
