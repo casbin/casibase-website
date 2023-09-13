@@ -22,6 +22,19 @@ module.exports = {
         "basic/casdoor-sso",
       ],
     },
+    {
+      type: "category",
+      label: "Walkthrough Guides",
+      link: {type: "generated-index"},
+      items: [
+        "walkthrough-guides/deploy-casdoor-and-casibase",
+        "walkthrough-guides/add-a-storage-provider",
+        "walkthrough-guides/add-a-model-provider",
+        "walkthrough-guides/add-a-embedding-provider",
+        "walkthrough-guides/add-a-store",
+        "walkthrough-guides/chat-with-ai",
+      ],
+    },
     // {
     //   type: "category",
     //   label: "",
