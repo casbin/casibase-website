@@ -2,7 +2,7 @@
 title: Server Installation
 description: Install and configure Casdoor server
 keywords: [Casibase server, installation, configuration]
-authors: [kv-chiu, uestc-wxy]
+authors: [kv-chiu, palp1tate]
 ---
 
 ## Requirements
