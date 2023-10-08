@@ -2,7 +2,7 @@
 title: Casdoor-SSO
 description: Setup Casdoor for casibase
 keywords: [Casdoor, SSO, Security, Authentication, Authorization]
-authors: [uestc-wxy]
+authors: [palp1tate]
 ---
 
 ```mdx-code-block
