@@ -5,6 +5,9 @@
         },
         {
             "pattern": "^https://azure.microsoft.com/en-us/products/storage/blobs"
+        },
+        {
+            "pattern": "^https://[\\w.]*openai.com"
         }
     ]
 }
