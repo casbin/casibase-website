@@ -22,7 +22,7 @@ All major operating systems including Windows, Linux and macOS are supported.
 The use of Casibase is divided into two steps:
 
 - step1: [Deploy and run Casdoor](https://casdoor.org/docs/basic/server-installation)
-- step2: [Deploy and run Casibase](https://casibase.org/)
+- step2: Deploy and run Casibase (this docs)
 
 We strongly suggest you use [Yarn 1.x](https://classic.yarnpkg.com/en/docs/install) to run & build Casdoor&Casibase frontend, using NPM might cause UI styling issues, see more details at: [casdoor#294](https://github.com/casdoor/casdoor/issues/294)
 
@@ -51,10 +51,10 @@ Casibase uses [XORM](https://xorm.io/) to talk to the database. Based on [Xorm D
 
 The source code of Casibase is hosted at GitHub: <https://github.com/casbin/casibase>. Both the Go backend code and React frontend code are inside the single repository.
 
-Name | Description                      | Language | Source code
-----|----------------------------------|----|----
-Frontend | Web frontend UI for Casibase     | JavaScript + React | <https://github.com/casbin/casibase/tree/master/web>
-Backend | RESTful API backend for Casibase | Golang + Beego + XORM | <https://github.com/casbin/casibase>
+| Name     | Description                      | Language              | Source code                                          |
+|----------|----------------------------------|-----------------------|------------------------------------------------------|
+| Frontend | Web frontend UI for Casibase     | JavaScript + React    | <https://github.com/casbin/casibase/tree/master/web> |
+| Backend  | RESTful API backend for Casibase | Golang + Beego + XORM | <https://github.com/casbin/casibase>                 |
 
 Casibase supports `Go Modules`. To download the code, you can just simply clone the code via git:
 
@@ -67,7 +67,7 @@ git clone https://github.com/casbin/casibase
 
 ### Configure Casdoor
 
-Please refer to: <https://casibase.org/docs/basic/casdoor-sso> to configure Casdoor.
+Please refer to [Casdoor-SSO](/docs/basic/casdoor-sso) section to configure Casdoor.
 
 Remember your `clientId`、`clientSecret`、`organization`、`application` and so on in Casdoor configuration, we will use them later.
 
@@ -133,23 +133,23 @@ dbName = casibase
 
 Casibase supports custom configuration, you can modify the configuration file `conf/app.conf` to change the configuration.
 
-- Backend (casibase\conf\app.conf)
+- Backend (conf/app.conf)
 
 ```ini
-casdoorEndpoint =  http://localhost:8000
-clientId = <Your_clientId_in_Casdoor_configuration>
-clientSecret = <Your_clientSecret_in_Casdoor_configuration>
-casdoorOrganization = casibase
-casdoorApplication = app-casibase
+casdoorEndpoint = <Your Casdoor endpoint>
+clientId = <Your Casdoor application's client ID>
+clientSecret = <Your Casdoor application's client secret>
+casdoorOrganization = <Your Casdoor organization name>
+casdoorApplication = <Your Casdoor application name>
 ```
 
-- Frontend (casibase\web\src\Conf.js)
+- Frontend (web/src/Conf.js)
 
 ```js
-serverUrl: "http://localhost:7001"
-clientId: "<Your_clientId_in_Casdoor_configuration>" 
-appName: "app-casibase"
-organizationName: "casibase"
+serverUrl: "<Your Casdoor endpoint>"
+clientId: "<Your Casdoor application's client ID>" 
+appName: "<Your Casdoor application name>"
+organizationName: "<Your Casdoor organization name>"
 ```
 
 ## Run

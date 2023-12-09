@@ -10,9 +10,9 @@ import styles from '.././styles.module.css';
 import CasdoorCard from "@site/src/components/CasdoorCard";
 ```
 
-Casibase uses Casdoor as its backend service,so make sure to deploy it in advance.
+Casibase uses Casdoor as its identity and single-sign-on (SSO) provider. Make sure to deploy it in advance.
 
-Please refer to: <https://casdoor.org/docs/basic/server-installation> to install and configure Casdoor.
+Please refer to [Casdoor Server Installation](https://casdoor.org/docs/basic/server-installation) to install and configure Casdoor.
 
 Follow these steps to setup Casdoor for casibase:
 
