@@ -83,7 +83,7 @@ Vectors in Casibase represent numerical representations of different types of da
 - Image Vector
 - ... (other vector types)
 
-The Provider class definition is shown as follows:
+The Vector class definition is shown as follows:
 
 ```go
 type Vector struct {
