@@ -19,6 +19,7 @@ module.exports = {
         "overview",
         "basic/core-concepts",
         "basic/server-installation",
+        "basic/try-with-docker",
         "basic/casdoor-sso",
       ],
     },
