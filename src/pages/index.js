@@ -17,7 +17,7 @@ function HomepageHeader() {
         <br />
         <p className="hero__subtitle" style={{margin: "0 auto", maxWidth: 700}}>
           <Translate>
-            Domain knowledge database powered by ChatGPT, Casbin and Casdoor
+            🚀⚡️Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models
           </Translate>
         </p>
         <br />
@@ -26,7 +26,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             style={{marginTop: "2rem", marginRight: "3rem", marginLeft: "3rem"}}
             to="/docs/overview">
-            <Translate>Get Started</Translate>
+            <Translate>🚀Get Started⚡️</Translate>
           </Link>
         </div>
       </div>
@@ -38,7 +38,7 @@ function Showcase() {
   return (
     <div className="hero text--center showcase">
       <div className="container">
-        <h1><Translate>Who&apos;s using Casbin?</Translate></h1>
+        <h1><Translate>Who&apos;s using Casibase?</Translate></h1>
         <p style={{
           width: "50vw",
           margin: "auto",
@@ -50,7 +50,7 @@ function Showcase() {
               </Link>
             ),
           }}>
-            {"Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups.If you're curious to see what can be accomplished Casbin, {UsersPage}!"}
+            {"Hundreds of projects are using Casibase, from established Fortune 500 companies to hot new startups.If you're curious to see what can be accomplished Casbin, {UsersPage}!"}
           </Translate>
         </p>
         <br /><br />
@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <Layout
       title={"Casibase"}
-      description="Domain knowledge database powered by ChatGPT, Casbin and Casdoor">
+      description="⚡️Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO⚡️, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

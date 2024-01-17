@@ -3,7 +3,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "Casibase · Domain knowledge database powered by ChatGPT, Casbin and Casdoor",
+  title: "Casibase · Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models",
   url: "https://casibase.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -16,7 +16,7 @@ module.exports = {
     locales: ["en", "zh", "fr", "de", "ko", "ru", "ja"],
   },
   themeConfig: {
-    metadata: [{name: "Casibase", content: "Domain knowledge database powered by ChatGPT, Casbin and Casdoor"}],
+    metadata: [{name: "Casibase", content: "Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models"}],
     // algolia: {
     //   appId: "",
     //   apiKey: "",

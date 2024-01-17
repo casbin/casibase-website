@@ -7,39 +7,39 @@ import {useColorMode} from "@docusaurus/theme-common";
 const FeatureList = [
   {
     title: translate({
-      message: "Feature 1",
+      message: "Comprehensive Model Support",
     }),
     path: "/img/model",
     description: (
       <>
         <Translate>
-          detail description
+          Integrates a diverse range of AI models, including ChatGPT, Azure OpenAI, HuggingFace, and more, complemented by support for various embedding APIs like OpenAI Ada and Baidu Wenxin Yiyi.
         </Translate>
       </>
     ),
   },
   {
     title: translate({
-      message: "Feature 2",
+      message: "Advanced Document Handling & AI Assistance",
     }),
     path: "/img/storage",
     description: (
       <>
         <Translate>
-          detail description
+          Supports multiple document formats including txt, markdown, docx, pdf with intelligent parsing, and features an embedded AI assistant for real-time online chat and manual session handover.
         </Translate>
       </>
     ),
   },
   {
     title: translate({
-      message: "Feature 3",
+      message: "Enterprise-Level Features & Multilingual Support",
     }),
     path: "/img/language",
     description: (
       <>
         <Translate>
-          detail description
+          Offers multi-user and multi-tenant capabilities with enterprise-grade Single Sign-On (SSO), comprehensive chat session logging for auditing, and a multilingual interface supporting Chinese, English, and more.
         </Translate>
       </>
     ),
