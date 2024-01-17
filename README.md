@@ -1,8 +1,8 @@
-# [casibase.org](https://casibase.org) [![Build and Deploy](https://github.com/casbin/casibase-website/actions/workflows/master.yml/badge.svg)](https://github.com/casbin/casibase-website/actions/workflows/master.yml)
+# [casibase.org](https://casibase.org) [![Build and Deploy](https://github.com/casibase/casibase-website/actions/workflows/master.yml/badge.svg)](https://github.com/casibase/casibase-website/actions/workflows/master.yml)
 
 The configuration and documentation of casibase website: <https://casibase.org/>.
 
-casibase website is built using [Docusaurus](https://docusaurus.io/), you can get the PDF at [casibase.org/pdf](https://casibase.org/pdf) or [GitHub Action](https://github.com/casbin/casibase-website/actions/workflows/master.yml).
+casibase website is built using [Docusaurus](https://docusaurus.io/), you can get the PDF at [casibase.org/pdf](https://casibase.org/pdf) or [GitHub Action](https://github.com/casibase/casibase-website/actions/workflows/master.yml).
 
 ## Get Started
 
@@ -14,7 +14,7 @@ casibase website is built using [Docusaurus](https://docusaurus.io/), you can ge
 
 ### Running Locally
 
-1. `git clone https://github.com/casbin/casibase-website.git`
+1. `git clone https://github.com/casibase/casibase-website.git`
 2. `cd casibase-website`
 3. `yarn`: install dependencies.
 4. `yarn start`: starting the development server.

@@ -49,18 +49,18 @@ Casibase uses [XORM](https://xorm.io/) to talk to the database. Based on [Xorm D
 
 ## Download
 
-The source code of Casibase is hosted at GitHub: <https://github.com/casbin/casibase>. Both the Go backend code and React frontend code are inside the single repository.
+The source code of Casibase is hosted at GitHub: <https://github.com/casibase/casibase>. Both the Go backend code and React frontend code are inside the single repository.
 
 | Name     | Description                      | Language              | Source code                                          |
 |----------|----------------------------------|-----------------------|------------------------------------------------------|
-| Frontend | Web frontend UI for Casibase     | JavaScript + React    | <https://github.com/casbin/casibase/tree/master/web> |
-| Backend  | RESTful API backend for Casibase | Golang + Beego + XORM | <https://github.com/casbin/casibase>                 |
+| Frontend | Web frontend UI for Casibase     | JavaScript + React    | <https://github.com/casibase/casibase/tree/master/web> |
+| Backend  | RESTful API backend for Casibase | Golang + Beego + XORM | <https://github.com/casibase/casibase>                 |
 
 Casibase supports `Go Modules`. To download the code, you can just simply clone the code via git:
 
 ```shell
 cd path/to/folder
-git clone https://github.com/casbin/casibase
+git clone https://github.com/casibase/casibase
 ```
 
 ## Configuration
@@ -77,7 +77,7 @@ Casibase supports mysql, mssql, sqlite3, postgres. Casibase uses mysql by defaul
 
 #### MySQL
 
-Casibase will store its users, nodes and topics information in a MySQL database named: `casibase`. If the database does not exist, it needs to be created manually. The DB connection string can be specified at: <https://github.com/casbin/casibase/blob/master/conf/app.conf>
+Casibase will store its users, nodes and topics information in a MySQL database named: `casibase`. If the database does not exist, it needs to be created manually. The DB connection string can be specified at: <https://github.com/casibase/casibase/blob/master/conf/app.conf>
 
   ```ini
   driverName = mysql

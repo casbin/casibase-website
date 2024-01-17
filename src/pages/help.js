@@ -41,7 +41,7 @@ function Help() {
           </div>
           <div className="col">
             <h2>Github</h2>
-            <Translate>At our</Translate> <a href="https://github.com/casbin/casibase"><Translate>GitHub repo</Translate></a><Translate>, browse and submit</Translate> <a href="https://github.com/casbin/casibase/issues">issues</a> or <a href="https://github.com/casbin/casibase/pulls">pull requests</a> <Translate>for bugs you find or any new features you may want implemented.</Translate>
+            <Translate>At our</Translate> <a href="https://github.com/casibase/casibase"><Translate>GitHub repo</Translate></a><Translate>, browse and submit</Translate> <a href="https://github.com/casibase/casibase/issues">issues</a> or <a href="https://github.com/casibase/casibase/pulls">pull requests</a> <Translate>for bugs you find or any new features you may want implemented.</Translate>
           </div>
         </div>
       </div>

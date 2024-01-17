@@ -80,7 +80,7 @@ module.exports = {
           ],
         },
         {
-          href: "https://github.com/casbin/casibase",
+          href: "https://github.com/casibase/casibase",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
@@ -126,7 +126,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/casbin/casibase",
+              href: "https://github.com/casibase/casibase",
             },
             {
               label: "Discord",
@@ -151,7 +151,7 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/casbin/casibase",
+              href: "https://github.com/casibase/casibase",
             },
             {
               html: `
@@ -215,13 +215,13 @@ var _hmt = _hmt || [];
           sidebarPath: require.resolve("./sidebars.js"),
           sidebarCollapsed: false,
           editUrl: ({docPath}) => {
-            return `https://github.com/casbin/casibase-website/edit/master/docs/${docPath}`;
+            return `https://github.com/casibase/casibase-website/edit/master/docs/${docPath}`;
           },
         },
         blog: {
           showReadingTime: true,
           editUrl: ({blogDirPath, blogPath}) => {
-            return `https://github.com/casbin/casibase-website/edit/master/${blogDirPath}/${blogPath}`;
+            return `https://github.com/casibase/casibase-website/edit/master/${blogDirPath}/${blogPath}`;
           },
         },
         theme: {
