@@ -3,7 +3,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "Casibase · Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models",
+  title: "Casibase · Open-source AI LangChain-like RAG (Retrieval-Augmented Generation) knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, LLaMA, Google Gemini, HuggingFace, Claude, Grok, etc.",
   url: "https://casibase.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -16,7 +16,7 @@ module.exports = {
     locales: ["en", "zh", "fr", "de", "ko", "ru", "ja"],
   },
   themeConfig: {
-    metadata: [{name: "Casibase", content: "Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models"}],
+    metadata: [{name: "Casibase", content: "Open-source AI LangChain-like RAG (Retrieval-Augmented Generation) knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, LLaMA, Google Gemini, HuggingFace, Claude, Grok, etc."}],
     // algolia: {
     //   appId: "",
     //   apiKey: "",
@@ -35,7 +35,7 @@ module.exports = {
       title: "Casibase",
       logo: {
         alt: "My Site Logo",
-        src: "img/casbin.svg",
+        src: "img/casibase-logo_879x880.png",
       },
       // hideOnScroll: true,
       items: [
@@ -155,7 +155,7 @@ module.exports = {
             },
             {
               html: `
-              <iframe src="https://ghbtns.com/github-btn.html?user=casbin&repo=casibase&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub">Casibase</iframe>
+              <iframe src="https://ghbtns.com/github-btn.html?user=casibase&repo=casibase&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub">Casibase</iframe>
               `,
             },
             {
@@ -178,9 +178,10 @@ var _hmt = _hmt || [];
         },
       ],
       logo: {
-        alt: "Casbin Logo",
-        src: "img/casbin_min.svg",
+        alt: "Casibase Logo",
+        src: "img/casibase-logo_879x880.png",
         href: "https://casibase.org/",
+        width: 100,
       },
       copyright: `Copyright © ${new Date().getFullYear()} Casibase contributors.`,
     },
@@ -192,7 +193,7 @@ var _hmt = _hmt || [];
     announcementBar: {
       id: "announcement", // ID of the announcement bar
       content:
-        "<a target=\"_blank\" rel=\"noreferrer\" href=\"https://casbin.org/\">💖 Looking for an open-source and cross-platform authorization solution that supports ACL, RBAC, ABAC? Learn more about: Casbin</a>",
+        "<a target=\"_blank\" rel=\"noreferrer\" href=\"https://casdoor.org/\">💖 Looking for an open-source identity and access management solution like Okta, Auth0, Keycloak ? Learn more about: Casdoor</a>",
       isCloseable: true,
     },
     docs: {

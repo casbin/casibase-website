@@ -17,7 +17,8 @@ function HomepageHeader() {
         <br />
         <p className="hero__subtitle" style={{margin: "0 auto", maxWidth: 700}}>
           <Translate>
-            🚀⚡️Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models
+            🚀⚡️Open-source AI LangChain-like RAG (Retrieval-Augmented Generation) knowledge database with web UI and
+            Enterprise SSO, supports OpenAI, Azure, LLaMA, Google Gemini, HuggingFace, Claude, Grok, etc.
           </Translate>
         </p>
         <br />
@@ -28,7 +29,20 @@ function HomepageHeader() {
             to="/docs/overview">
             <Translate>🚀Get Started⚡️</Translate>
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            style={{marginTop: "2rem", marginRight: "3rem", marginLeft: "3rem"}}
+            to="https://demo.casibase.com">
+            <Translate>Online Demo (Chat Bot)</Translate>
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            style={{marginTop: "2rem", marginRight: "3rem", marginLeft: "3rem"}}
+            to="https://demo-admin.casibase.com">
+            <Translate>Online Demo (Admin UI)</Translate>
+          </Link>
         </div>
+        <br />
       </div>
     </header>
   );
@@ -76,7 +90,7 @@ export default function Home() {
   return (
     <Layout
       title={"Casibase"}
-      description="⚡️Open-source LangChain-like AI knowledge database with web UI and Enterprise SSO⚡️, supports OpenAI, Azure, Google Gemini, HuggingFace, OpenRouter, ChatGLM and local models">
+      description="⚡️Open-source AI LangChain-like RAG (Retrieval-Augmented Generation) knowledge database with web UI and Enterprise SSO⚡️, supports OpenAI, Azure, LLaMA, Google Gemini, HuggingFace, Claude, Grok, etc.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
