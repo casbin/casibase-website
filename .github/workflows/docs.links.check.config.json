@@ -4,6 +4,9 @@
             "pattern": "^(?!https?:\/\/)"
         },
         {
+            "pattern": "^http://localhost"
+        },
+        {
             "pattern": "^https://azure.microsoft.com/en-us/products/storage/blobs"
         },
         {
