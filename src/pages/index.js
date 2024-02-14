@@ -64,7 +64,7 @@ function Showcase() {
               </Link>
             ),
           }}>
-            {"Hundreds of projects are using Casibase, from established Fortune 500 companies to hot new startups.If you're curious to see what can be accomplished Casbin, {UsersPage}!"}
+            {"Hundreds of projects are using Casibase, from established Fortune 500 companies to hot new startups.If you're curious to see what can be accomplished Casibase, {UsersPage}!"}
           </Translate>
         </p>
         <br /><br />
