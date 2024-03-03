@@ -82,7 +82,7 @@ Casibase will store its users, nodes and topics information in a MySQL database 
   ```ini
   driverName = mysql
   dataSourceName = root:123456@tcp(localhost:3306)/
-  dbName = casdoor
+  dbName = casibase
   ```
 
 #### PostgreSQL
