@@ -56,16 +56,6 @@ module.exports = {
           position: "left",
         },
         {
-          href: "https://casdoor.com",
-          label: "For Enterprise",
-          position: "left",
-        },
-        {
-          href: "https://casdoor.com",
-          label: "Hosting Plan (SaaS)",
-          position: "left",
-        },
-        {
           type: "localeDropdown",
           position: "right",
           dropdownItemsAfter: [
@@ -92,20 +82,6 @@ module.exports = {
         {
           type: "search",
           position: "right",
-        },
-        {
-          type: "custom-casdoor",
-          label: "Sign Up",
-          src: "https://casdoor.com",
-          position: "right",
-          className: "casdoor-signup casdoor-link",
-        },
-        {
-          type: "custom-casdoor",
-          label: "Login",
-          src: "https://casdoor.com",
-          position: "right",
-          className: "casdoor-login casdoor-link",
         },
       ],
     },
@@ -190,12 +166,6 @@ var _hmt = _hmt || [];
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
-    announcementBar: {
-      id: "announcement", // ID of the announcement bar
-      content:
-        "<a target=\"_blank\" rel=\"noreferrer\" href=\"https://casdoor.org/\">💖 Looking for an open-source identity and access management solution like Okta, Auth0, Keycloak ? Learn more about: Casdoor</a>",
-      isCloseable: true,
-    },
     docs: {
       sidebar: {hideable: true},
     },
@@ -239,10 +209,6 @@ var _hmt = _hmt || [];
   scripts: [
     {
       src: "/js/isMainland.js",
-      async: true,
-    },
-    {
-      src: "/js/tawk.js",
       async: true,
     },
   ],
