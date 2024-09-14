@@ -42,3 +42,33 @@ Click the `Save & Exit` button and return stores list page:
 Now, you can use the store to store knowledge base data, convert text to vectors, and chat with the chatbot.
 
 In the next section, we will learn how to chat with the chatbot in Casibase.
+
+## Support Multi-Store
+
+The multi-store mode provides users with different models, suggestions, and more within each distinct store.
+
+### Step 1: Enable Multi-Store
+
+First you should enable multi-repository mode in the built-in store.
+
+Click the`Stores`button on the home page and then click the`store-built-in`button to enter the store-built-in store.
+
+![Casibase-stores-form-builtIn](/img/walkthrough-guides/casibase-stores-form-builtIn.png)
+
+Scroll down and find the `Can Select Store`field, tick it.
+
+![Casibase-stores-multi-store-enable](/img/walkthrough-guides/casibase-stores-multi-store-enable.png)
+
+### Step 2: Add Usable Store
+
+The multi-store mode only provides usable stores. To make a store usable, you need to configure its storage provider, model provider, and embedding provider.
+
+### Step 3: Select For Conversation
+
+Casibase provides a very convenient method for selecting a store.
+
+![Casibase-stores-multi-store-choose](/img/walkthrough-guides/casibase-stores-multi-store-choose.png)
+
+Just hover your mouse over "New Chat" and then you can select the Store you wish to use from the list that appears below.
+
+If you click the "New Chat" button, the system will assign you a default Store.
