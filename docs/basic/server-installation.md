@@ -13,7 +13,7 @@ All major operating systems including Windows, Linux and macOS are supported.
 
 ### Environment
 
-- [Go 1.17+](https://go.dev/dl/)
+- [Go 1.20+](https://go.dev/dl/)
 - [Node.js LTS (18)](https://nodejs.org)
 - [Yarn 1.x](https://classic.yarnpkg.com/en/docs/install)
 
