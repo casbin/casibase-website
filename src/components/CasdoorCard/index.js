@@ -14,7 +14,7 @@ export default function CasdoorCard(props) {
 }
 
 CasdoorCard.defaultProps = {
-  src: "https://demo.casibase.com",
+  src: "https://ai.casibase.com",
   width: "600",
   height: "700",
 };

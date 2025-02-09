@@ -32,13 +32,13 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             style={{marginTop: "2rem", marginRight: "3rem", marginLeft: "3rem"}}
-            to="https://demo.casibase.com">
+            to="https://ai.casibase.com">
             <Translate>Online Demo (Chat Bot)</Translate>
           </Link>
           <Link
             className="button button--secondary button--lg"
             style={{marginTop: "2rem", marginRight: "3rem", marginLeft: "3rem"}}
-            to="https://demo-admin.casibase.com">
+            to="https://ai-admin.casibase.com">
             <Translate>Online Demo (Admin UI)</Translate>
           </Link>
         </div>
