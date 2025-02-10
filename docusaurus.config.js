@@ -211,5 +211,9 @@ var _hmt = _hmt || [];
       src: "/js/isMainland.js",
       async: true,
     },
+    {
+      src: "/js/casibase.js",
+      async: true,
+    },
   ],
 };
