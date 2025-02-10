@@ -34,8 +34,8 @@ module.exports = {
     navbar: {
       title: "Casibase",
       logo: {
-        alt: "My Site Logo",
-        src: "img/casibase-logo_879x880.png",
+        alt: "Casibase Logo",
+        src: "img/casibase.png",
       },
       // hideOnScroll: true,
       items: [
@@ -155,9 +155,9 @@ var _hmt = _hmt || [];
       ],
       logo: {
         alt: "Casibase Logo",
-        src: "img/casibase-logo_879x880.png",
+        src: "img/casibase.png",
         href: "https://casibase.org/",
-        width: 100,
+        width: 50,
       },
       copyright: `Copyright © ${new Date().getFullYear()} Casibase contributors.`,
     },
